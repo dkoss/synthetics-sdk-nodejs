@@ -1,6 +1,5 @@
 on:
   push:
-    branches: [main]
   pull_request:
 name: ci
 jobs:
@@ -8,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [18, 20]
+        node: [20]
         include:
           # use latest npm by default
           - npm-version: latest
